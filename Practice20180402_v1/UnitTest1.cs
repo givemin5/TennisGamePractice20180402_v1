@@ -64,6 +64,13 @@ namespace Practice20180402_v1
             ScoreShouldBe("Deuce");
         }
 
+        [TestMethod]
+        public void Deuce_when_4_4()
+        {
+            GivenFirstPlayerScoreTimnes(4);
+            GivenSecondPlayerScoreTimes(4);
+            ScoreShouldBe("Deuce");
+        }
         private void GivenSecondPlayerScoreTimes(int times)
         {
             for (int i = 0; i < times; i++)
