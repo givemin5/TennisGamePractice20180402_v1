@@ -16,26 +16,32 @@ namespace Practice20180402_v1
         [TestMethod]
         public void Fifteen_Love()
         {
-            tennisGame.FirstPlayerScore();
+            GivenFirstPlayerScoreTimnes(1);
             ScoreShouldBe("Fifteen Love");
         }
 
         [TestMethod]
         public void Thirty_Love()
         {
-            tennisGame.FirstPlayerScore();
-            tennisGame.FirstPlayerScore();
+            GivenFirstPlayerScoreTimnes(2);
             ScoreShouldBe("Thirty Love");
         }
 
         [TestMethod]
         public void Forty_Love()
         {
-            tennisGame.FirstPlayerScore();
-            tennisGame.FirstPlayerScore();
-            tennisGame.FirstPlayerScore();
+            GivenFirstPlayerScoreTimnes(3);
             ScoreShouldBe("Forty Love");
         }
+
+        private void GivenFirstPlayerScoreTimnes(int times)
+        {
+            for (int i = 0; i < times; i++)
+            {
+                tennisGame.FirstPlayerScore();
+            }
+        }
+
         private void ScoreShouldBe(string expected)
         {
             string score = tennisGame.Score();
