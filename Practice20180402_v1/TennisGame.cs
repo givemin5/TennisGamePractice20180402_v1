@@ -27,5 +27,10 @@ namespace Practice20180402_v1
         {
             _firstPlayerScoreTimes++;
         }
+
+        public void SecondPlayerScore()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
