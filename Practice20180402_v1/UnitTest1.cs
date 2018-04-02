@@ -5,7 +5,7 @@ namespace Practice20180402_v1
     [TestClass]
     public class TennisGameTests
     {
-        private TennisGame tennisGame = new TennisGame();
+        private TennisGame tennisGame = new TennisGame("Joey","Mei");
 
         [TestMethod]
         public void Love_All()
@@ -70,6 +70,14 @@ namespace Practice20180402_v1
             GivenFirstPlayerScoreTimnes(4);
             GivenSecondPlayerScoreTimes(4);
             ScoreShouldBe("Deuce");
+        }
+
+        [TestMethod]
+        public void FirstPlayer_Adv()
+        {
+            GivenFirstPlayerScoreTimnes(4);
+            GivenSecondPlayerScoreTimes(3);
+            ScoreShouldBe("Joey Adv");
         }
         private void GivenSecondPlayerScoreTimes(int times)
         {
