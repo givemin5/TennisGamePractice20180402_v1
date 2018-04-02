@@ -40,6 +40,22 @@ namespace Practice20180402_v1
             tennisGame.SecondPlayerScore();
             ScoreShouldBe("Love Fifteen");
         }
+
+        [TestMethod]
+        public void Love_Thirty()
+        {
+            GivenSecondPlayerScore(2);
+            ScoreShouldBe("Love Thirty");
+        }
+
+        private void GivenSecondPlayerScore(int times)
+        {
+            for (int i = 0; i < times; i++)
+            {
+                tennisGame.SecondPlayerScore();
+            }
+        }
+
         private void GivenFirstPlayerScoreTimnes(int times)
         {
             for (int i = 0; i < times; i++)
