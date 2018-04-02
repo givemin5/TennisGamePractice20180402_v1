@@ -51,7 +51,7 @@ namespace Practice20180402_v1
         [TestMethod]
         public void Fifteen_All()
         {
-            GivenSecondPlayerScore(1);
+            GivenFirstPlayerScoreTimnes(1);
             GivenSecondPlayerScore(1);
             ScoreShouldBe("Fifteen All");
         }
