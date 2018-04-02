@@ -38,6 +38,8 @@ namespace Practice20180402_v1
                     {
                         return advPlayer + " Adv";
                     }
+
+                    return advPlayer + " Win";
                 }
 
                 return scoreLookup[_firstPlayerScoreTimes] + " " + scoreLookup[_secondPlayerScoreTimes];
