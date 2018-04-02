@@ -17,8 +17,9 @@ namespace Practice20180402_v1
         public void Fifteen_Love()
         {
             tennisGame.FirstPlayerScore();
-            ScoreShouldBe("Love All");
+            ScoreShouldBe("Fifteen Love");
         }
+
         private void ScoreShouldBe(string expected)
         {
             string score = tennisGame.Score();
