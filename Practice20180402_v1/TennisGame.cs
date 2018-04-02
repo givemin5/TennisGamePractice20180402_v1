@@ -5,6 +5,7 @@ namespace Practice20180402_v1
     public class TennisGame
     {
         private int _firstPlayerScoreTimes;
+        private int _secondPlayerScoreTimes;
 
         private Dictionary<int, string> scoreLookup = new Dictionary<int, string>
             {
@@ -20,6 +21,11 @@ namespace Practice20180402_v1
                 return scoreLookup[_firstPlayerScoreTimes] + " Love";
             }
 
+            if (_secondPlayerScoreTimes > 0)
+            {
+                return "Love " + scoreLookup[_secondPlayerScoreTimes];
+            }
+
             return "Love All";
         }
 
@@ -30,7 +36,7 @@ namespace Practice20180402_v1
 
         public void SecondPlayerScore()
         {
-            throw new System.NotImplementedException();
+            _secondPlayerScoreTimes++;
         }
     }
 }
