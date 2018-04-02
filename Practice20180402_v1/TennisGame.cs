@@ -9,6 +9,7 @@ namespace Practice20180402_v1
 
         private Dictionary<int, string> scoreLookup = new Dictionary<int, string>
             {
+                {0, "Love"},
                 {1, "Fifteen"},
                 {2, "Thirty"},
                 {3, "Forty"},
@@ -16,14 +17,9 @@ namespace Practice20180402_v1
 
         public string Score()
         {
-            if (_firstPlayerScoreTimes > 0)
+            if (_firstPlayerScoreTimes != _secondPlayerScoreTimes)
             {
-                return scoreLookup[_firstPlayerScoreTimes] + " Love";
-            }
-
-            if (_secondPlayerScoreTimes > 0)
-            {
-                return "Love " + scoreLookup[_secondPlayerScoreTimes];
+                return scoreLookup[_firstPlayerScoreTimes] + " " + scoreLookup[_secondPlayerScoreTimes];
             }
 
             return "Love All";
