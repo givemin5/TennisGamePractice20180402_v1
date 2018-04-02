@@ -20,6 +20,13 @@ namespace Practice20180402_v1
             ScoreShouldBe("Fifteen Love");
         }
 
+        [TestMethod]
+        public void Forty_Love()
+        {
+            tennisGame.FirstPlayerScore();
+            tennisGame.FirstPlayerScore();
+            ScoreShouldBe("Forty Love");
+        }
         private void ScoreShouldBe(string expected)
         {
             string score = tennisGame.Score();
