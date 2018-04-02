@@ -44,7 +44,7 @@ namespace Practice20180402_v1
         [TestMethod]
         public void Love_Thirty()
         {
-            GivenSecondPlayerScore(2);
+            GivenSecondPlayerScoreTimes(2);
             ScoreShouldBe("Love Thirty");
         }
 
@@ -52,11 +52,19 @@ namespace Practice20180402_v1
         public void Fifteen_All()
         {
             GivenFirstPlayerScoreTimnes(1);
-            GivenSecondPlayerScore(1);
+            GivenSecondPlayerScoreTimes(1);
             ScoreShouldBe("Fifteen All");
         }
 
-        private void GivenSecondPlayerScore(int times)
+        [TestMethod]
+        public void Deuce()
+        {
+            GivenFirstPlayerScoreTimnes(3);
+            GivenSecondPlayerScoreTimes(3);
+            ScoreShouldBe("Deuce");
+        }
+
+        private void GivenSecondPlayerScoreTimes(int times)
         {
             for (int i = 0; i < times; i++)
             {
