@@ -48,6 +48,14 @@ namespace Practice20180402_v1
             ScoreShouldBe("Love Thirty");
         }
 
+        [TestMethod]
+        public void Fifteen_All()
+        {
+            GivenSecondPlayerScore(1);
+            GivenSecondPlayerScore(1);
+            ScoreShouldBe("Fifteen All");
+        }
+
         private void GivenSecondPlayerScore(int times)
         {
             for (int i = 0; i < times; i++)
