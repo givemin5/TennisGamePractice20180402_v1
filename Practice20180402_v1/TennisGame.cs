@@ -16,12 +16,12 @@ namespace Practice20180402_v1
                 {3, "Forty"},
             };
 
-        private string _fistPlayerName;
+        private string _firstPlayerName;
         private string _secondPlayerName;
 
         public TennisGame(string firstPlayerName, string secondPlayerName)
         {
-            _fistPlayerName = firstPlayerName;
+            _firstPlayerName = firstPlayerName;
             _secondPlayerName = secondPlayerName;
         }
 
@@ -29,13 +29,17 @@ namespace Practice20180402_v1
         {
             if (_firstPlayerScoreTimes != _secondPlayerScoreTimes)
             {
-                if (_firstPlayerScoreTimes > 3)
+                if (_firstPlayerScoreTimes > 3 || _secondPlayerScoreTimes > 3)
                 {
+                    var advPlayer = (_firstPlayerScoreTimes > _secondPlayerScoreTimes)
+                        ? _firstPlayerName
+                        : _secondPlayerName;
                     if (Math.Abs(_firstPlayerScoreTimes - _secondPlayerScoreTimes) == 1)
                     {
-                        return _fistPlayerName + " Adv";
+                        return advPlayer + " Adv";
                     }
                 }
+
                 return scoreLookup[_firstPlayerScoreTimes] + " " + scoreLookup[_secondPlayerScoreTimes];
             }
 

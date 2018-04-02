@@ -79,6 +79,14 @@ namespace Practice20180402_v1
             GivenSecondPlayerScoreTimes(3);
             ScoreShouldBe("Joey Adv");
         }
+
+        [TestMethod]
+        public void SecondPlayer_Adv()
+        {
+            GivenFirstPlayerScoreTimnes(3);
+            GivenSecondPlayerScoreTimes(4);
+            ScoreShouldBe("Mei Adv");
+        }
         private void GivenSecondPlayerScoreTimes(int times)
         {
             for (int i = 0; i < times; i++)
