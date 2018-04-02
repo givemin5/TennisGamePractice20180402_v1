@@ -6,14 +6,15 @@ namespace Practice20180402_v1
     {
         private int _firstPlayerScoreTimes;
 
-        public string Score()
-        {
-            var scoreLookup = new Dictionary<int, string>
+        private Dictionary<int, string> scoreLookup = new Dictionary<int, string>
             {
                 {1, "Fifteen"},
                 {2, "Thirty"},
                 {3, "Forty"},
             };
+
+        public string Score()
+        {
             if (_firstPlayerScoreTimes > 0)
             {
                 return scoreLookup[_firstPlayerScoreTimes] + " Love";
