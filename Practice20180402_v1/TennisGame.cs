@@ -11,7 +11,8 @@ namespace Practice20180402_v1
             var scoreLookup = new Dictionary<int, string>
             {
                 {1, "Fifteen"},
-                {2, "Forty"},
+                {2, "Thirty"},
+                {3, "Forty"},
             };
             if (_firstPlayerScoreTimes > 0)
             {

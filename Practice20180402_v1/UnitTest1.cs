@@ -21,8 +21,17 @@ namespace Practice20180402_v1
         }
 
         [TestMethod]
+        public void Thirty_Love()
+        {
+            tennisGame.FirstPlayerScore();
+            tennisGame.FirstPlayerScore();
+            ScoreShouldBe("Thirty Love");
+        }
+
+        [TestMethod]
         public void Forty_Love()
         {
+            tennisGame.FirstPlayerScore();
             tennisGame.FirstPlayerScore();
             tennisGame.FirstPlayerScore();
             ScoreShouldBe("Forty Love");
